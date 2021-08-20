@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+
+xrdb /home/user/.Xresources &
+setxkbmap -layout fr -variant azerty &
+feh --bg-fill --no-fehbg /home/user/.wallpaper.jpg &
+
+exec bspwm
