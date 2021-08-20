@@ -1,0 +1,72 @@
+#!/usr/bin/bash
+
+[[ $- != *i* ]] && return
+
+export BROWSER="firefox"
+export EDITOR="nvim"
+export LAUNCHER="rofi --show drun"
+export TERM="alacritty"
+export VISUAL="code"
+
+export CHROME_EXECUTABLE="google-chrome-stable"
+export JAVA_OPTS='-XX:+IgnoreUnrecognizedVMOptions'
+export JAVA_HOME='/usr/lib/jvm/java-8-openjdk'
+
+export REPOSITORIES="$HOME/documents/repositories"
+export DOTFILES="$REPOSITORIES/github.com/dotfiles"
+
+export ANDROID_SDK_ROOT='/opt/android-sdk'
+export LOCAL="$HOME/.local"
+export NVM_DIR="$HOME/.nvim"
+
+export ANDROID="$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/tools/bin"
+
+export PATH="$LOCAL/bin:$ANDROID:$PATH"
+
+export COLOR_RESET='\e[0m' 
+export COLOR_BLACK='\e[0;30m'
+export COLOR_GRAY='\e[1;30m'
+export COLOR_RED='\e[0;31m'
+export COLOR_LIGHT_RED='\e[1;31m'
+export COLOR_GREEN='\e[0;32m'
+export COLOR_LIGHT_GREEN='\e[1;32m'
+export COLOR_BROWN='\e[0;33m'
+export COLOR_YELLOW='\e[1;33m'
+export COLOR_BLUE='\e[0;34m'
+export COLOR_LIGHT_BLUE='\e[1;34m'
+export COLOR_PURPLE='\e[0;35m'
+export COLOR_LIGHT_PURPLE='\e[1;35m'
+export COLOR_CYAN='\e[0;36m'
+export COLOR_LIGHT_CYAN='\e[1;36m'
+export COLOR_LIGHT_GRAY='\e[0;37m'
+export COLOR_WHITE='\e[1;37m'
+
+parse_git_branch() {
+	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1 /'
+}
+
+PS1='\[\033[01;35m\]\u\[\033[01;32m\] \W \[\033[01;34m\]$(parse_git_branch)\[\033[00m\]'
+
+alias ls='ls --color=auto'
+
+alias la="ls -a"
+alias ll="ls -l"
+alias l="ls -la"
+
+alias reload='exec $SHELL'
+alias rel='exec $SHELL'
+
+alias dots="cd $DOTFILES"
+alias repos="cd $REPOSITORIES"
+alias gitrepos="cd $REPOSITORIES/github.com"
+alias labrepos="cd $REPOSITORIES/lab.blackfoot.io"
+
+alias todo="cat $HOME/.todo"
+alias editodo="nvim $HOME/.todo"
+
+alias spotify="/usr/bin/spotify --force-device-scale-factor=1.2"
+
+source "/usr/share/nvm/nvm.sh"
+source "/usr/share/nvm/bash_completion"
+source "/usr/share/nvm/install-nvm-exec"
+
