@@ -54,6 +54,7 @@ call plug#end()
 " }}}
 
 " Main configuration {{{1
+
 " Use VIM settings rather than Vi settings 
 if &compatible
   set nocompatible
@@ -218,11 +219,14 @@ noremap X "_x
 
 " Plugin configuration {{{1
 
-" Monnfly configuration {{{2
+" Moonfly configuration {{{2
 
 let g:moonflyUnderlineMatchParen = 1
 let g:moonflyItalics = 1
 let g:moonflyTransparent = 1
+
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 " }}}
 
