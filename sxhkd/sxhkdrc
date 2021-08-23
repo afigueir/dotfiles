@@ -34,6 +34,9 @@ super + shift + w
 super + alt + Escape
 	fancylockscreen -l
 
+super + alt + @space
+	bash /home/user/.config/rofi/scripts/scripts.bash
+
 #
 # bspwm 
 # ===== ===== ===== ===== ===== 
