@@ -61,7 +61,7 @@ module-margin-right = 1
 
 modules-left = bspwm xwindow
 module-center = 
-modules-right = my-network temperature cpu memory my-backlight my-volume my-battery date
+modules-right = my-network cpu memory my-backlight my-volume my-battery date
 
 [module/xwindow]
 type = internal/xwindow
@@ -70,19 +70,19 @@ label = %title:0:30:...%
 [module/bspwm]
 type = internal/bspwm
 
-label-focused = %index%
+label-focused = %name%
 label-focused-background = ${colors.primary}
 label-focused-foreground = ${colors.background}
 label-focused-padding = 1
 
-label-occupied = %index%
+label-occupied = %name%
 label-occupied-padding = 1
 
-label-urgent = %index%!
+label-urgent = %name%!
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 1
 
-label-empty = %index%
+label-empty = %name%
 label-empty-foreground = ${colors.background-alt}
 label-empty-padding = 1
 
