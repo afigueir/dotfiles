@@ -48,7 +48,6 @@ colors:
     foreground: None
     background: None
 
-  # Normal colors
   normal:
     black:   '#323437'
     red:     '#ff5454'
@@ -59,7 +58,6 @@ colors:
     cyan:    '#79dac8'
     white:   '#c6c6c6'
 
-  # Bright colors
   bright:
     black:   '#949494'
     red:     '#ff5189'
@@ -69,4 +67,3 @@ colors:
     magenta: '#ae81ff'
     cyan:    '#85dc85'
     white:   '#dadada'
-
