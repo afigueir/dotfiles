@@ -5,7 +5,7 @@ reboot
 shutdown" | rofi -dmenu -p "power")
 
 case $selected in
-	"exit") killall bspwm;;
+	"exit") bspc quit;;
 	"reboot") reboot;;
 	"shutdown") shutdown -h now;;
 esac

@@ -1,0 +1,9 @@
+configuration {
+	theme: "/home/user/.config/rofi/style.rasi";
+	font: "IBM Plex Mono SemiBold 12";
+	terminal: "alacritty";
+	show-match: false;
+	show-icons: false;
+	hide-scrollbar: true;
+	drun-display-format: "{name}";
+}
