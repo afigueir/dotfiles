@@ -2,7 +2,7 @@
   monitor = 0
   follow = mouse
 
-  geometry = "300x5-10+40"
+  geometry = "500x5-10+40"
 
   progress_bar = true
   progress_bar_height = 10
