@@ -2,27 +2,34 @@
 
 [[ $- != *i* ]] && return
 
+# Applications
 export BROWSER="firefox"
 export EDITOR="nvim"
 export LAUNCHER="rofi --show drun"
 export TERM="alacritty"
 export VISUAL="code"
-
 export CHROME_EXECUTABLE="google-chrome-stable"
+
+# Java
 export JAVA_OPTS='-XX:+IgnoreUnrecognizedVMOptions'
 export JAVA_HOME='/usr/lib/jvm/java-8-openjdk'
 
+# Directories
+export LOCAL="$HOME/.local"
+export LIBRARIES="$HOME/documents/libraries"
 export REPOSITORIES="$HOME/documents/repositories"
 export DOTFILES="$REPOSITORIES/github.com/dotfiles"
 
 export ANDROID_SDK_ROOT='/opt/android-sdk'
-export LOCAL="$HOME/.local"
 export NVM_DIR="$HOME/.nvim"
+export PYENV_ROOT="/home/user/.pyenv"
 
 export ANDROID="$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/tools/bin"
 
-export PATH="$LOCAL/bin:$ANDROID:$PATH"
+# Path
+export PATH="$LOCAL/bin:$PYENV_ROOT/shims:$ANDROID:$PATH"
 
+# Colors
 export COLOR_RESET='\e[0m' 
 export COLOR_BLACK='\e[0;30m'
 export COLOR_GRAY='\e[1;30m'
@@ -41,12 +48,14 @@ export COLOR_LIGHT_CYAN='\e[1;36m'
 export COLOR_LIGHT_GRAY='\e[0;37m'
 export COLOR_WHITE='\e[1;37m'
 
+# Prompt
 parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1 /'
 }
 
 PS1='\[\033[01;35m\]\u\[\033[01;32m\] \W \[\033[01;34m\]$(parse_git_branch)\[\033[00m\]'
 
+# Aliases
 alias ls='ls --color=auto'
 
 alias la="ls -a"
@@ -56,6 +65,7 @@ alias l="ls -la"
 alias reload='exec $SHELL'
 alias rel='exec $SHELL'
 
+alias libs="cd $LIBRARIES"
 alias dots="cd $DOTFILES"
 alias repos="cd $REPOSITORIES"
 alias gitrepos="cd $REPOSITORIES/github.com"
@@ -66,6 +76,15 @@ alias editodo="nvim $HOME/.todo"
 
 alias spotify="/usr/bin/spotify --force-device-scale-factor=1.2"
 
+alias masscan="$LIBRARIES/masscan/bin/masscan"
+alias massdns="$LIBRARIES/massdns/bin/massdns"
+alias nikto="$LIBRARIES/nikto/program/nikto.pl"
+alias dirsearch="python3 $LIBRARIES/dirsearch/dirsearch.py"
+alias sublister="python3 $LIBRARIES/Sublist3r/sublist3r.py"
+alias sqlmap="python3 $LIBRARIES/sqlmap/sqlmap.py"
+alias xsstrike="python3 $LIBRARIES/XSStrike/xsstrike.py"
+
+# Sources 
 source "/usr/share/nvm/nvm.sh"
 source "/usr/share/nvm/bash_completion"
 source "/usr/share/nvm/install-nvm-exec"

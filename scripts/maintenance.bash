@@ -15,7 +15,3 @@ sudo find / -xtype l -print
 echo "
 Update and upgrade system"
 yay -Syyu
-
-echo "
-Remove orphans packages"
-yay -Rs $(yay -Qqtd)

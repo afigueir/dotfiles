@@ -1,7 +1,7 @@
 * {
-	background-color: #000000;
-	border-color: #ffffff;
-	text-color: #808080;
+	background-color: #ffffff;
+	border-color: #202020;
+	text-color: #202020;
 }
 
 #window {
@@ -34,5 +34,5 @@
 }
 
 #element selected {
-	text-color: #ffffff;
+	text-color: #202020;
 }

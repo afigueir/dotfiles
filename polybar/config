@@ -11,10 +11,10 @@
 ; ===== ===== ===== ===== ===== ===== ===== ===== ===== =====
 
 [colors]
-background = ${xrdb:background:#080808}
-background-alt = ${xrdb:color0:#323437} 
-foreground = ${xrdb:foreground:#b2b2b2}
-foreground-alt = ${xrdb:color15:#dadada}
+background = #ffffff
+background-alt = #cccccc
+foreground = #202020
+foreground-alt = #909090
 alert = ${xrdb:color1:#ff5454}
 primary = ${xrdb:color10:#36c692}
 secondary = ${xrdb:color3:#e3c78a} 
@@ -83,7 +83,7 @@ label-urgent-background = ${colors.alert}
 label-urgent-padding = 1
 
 label-empty = %name%
-label-empty-foreground = ${colors.background-alt}
+label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 1
 
 [module/date]
@@ -94,21 +94,21 @@ date-alt = " %Y-%m-%d"
 time = %H:%M
 time-alt = %H:%M:%S
 format-prefix = 
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-foreground = ${colors.foreground}
 label = %date% %time%
 
 [module/cpu]
 type = internal/cpu
 interval = 5
 format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-foreground = ${colors.foreground}
 label = %percentage:2%%
 
 [module/memory]
 type = internal/memory
 interval = 5
 format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-foreground = ${colors.foreground}
 label = %percentage_used:2%%
 
 [module/temperature]
